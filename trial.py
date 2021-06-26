@@ -61,7 +61,7 @@ driver.find_element_by_xpath("//li[@class='bordernone ng-star-inserted']").click
 time.sleep(3)
 driver.find_element_by_id('mat-input-2').send_keys('570001')
 time.sleep(1)
-driver.find_element_by_id('mat-input-2').send_keys('\n')
+driver.find_element_by_xpath("//ion_button[@class='bordernone ng-star-inserted']").click()
 
 #Filter Search
 driver.find_element_by_id('c1').click()
