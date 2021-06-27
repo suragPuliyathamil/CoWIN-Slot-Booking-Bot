@@ -1,10 +1,13 @@
 # CowinBot
 
-#### Python files which will track vaccine availability and book vaccine. OTP is recieved by UDP Command to your HOST IP. Use any third party service to setup UDP command on mobile. Make sure to enter you phone number in the script.
+#### Python files which will track vaccine availability and book vaccine slot. OTP is recieved by UDP Command to your HOST IP. Use any third party service to setup UDP command on mobile. Make sure to enter you phone number and prefered Pincode in the script.
 
 NOTE : 
-* Co-WIN Public APIs allow any third-party application to access certain un-restricted information, that can be shared with its users.The extent of access will be limited and in case of any misuse impacting the performance of Co-WIN solution will result in blocking any such application and entities as per the policies of MoHFW and taking any other appropriate action in accordance with law. Further, these APIs are subject to a rate limit of 100 API calls per 5 minutes per IP. Please consider these points while using the APIs in your application. 
+* Co-WIN Public APIs allow any third-party application to access certain un-restricted information, that can be shared with its users.The extent of access will be limited and in case of any misuse impacting the performance of Co-WIN solution will result in blocking any such application and entities as per the policies of MoHFW and taking any other appropriate action in accordance with law. Further, these APIs are subject to a rate limit of 100 API calls per 5 minutes per IP. Please consider these points while using the APIs in your application. For further questions regarding API used in the scripts, please visit https://github.com/cowinapi/developer.cowin/issues. The scripts used here by default comply with the API call contraints that exists.
+
 * The Above scripts use nohangup calls and runs the process as a background task until they are interrupted. These process must be killed using scripts(here kill_process.sh and instantBookKill.sh) which kills the exact process by taking the process ID stored (here save_pid.txt and save_instant_pid.txt)
+
+* The scripts use traditional webscrapping method to navigate the webpage and book slot. The scripts select the first available slot based on the filters. By default it checks/books for Covishield Vaccine in both free and paid category for 18+ age category.
 
 * bookVaccine.py - Instantly runs and books slot given that you have setup up the UDP command with same port number in both mobile and host.
 * trackAndBook.py - keeps checking vaccine availability using public API available at https://apisetu.gov.in/public/marketplace/api/cowin in a particular pincode. If available books vaccine given that you have setup up the UDP command with same port number in both mobile and host.
