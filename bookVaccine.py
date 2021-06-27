@@ -18,14 +18,9 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 import time
-from datetime import date
-from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from PyQt5 import Qt
-import sys
 import socket
-import requests
 import os
 
 def coverter(text):
