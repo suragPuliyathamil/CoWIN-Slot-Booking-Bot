@@ -1,6 +1,12 @@
 # CowinBot
 
-Python files which will track vaccine availability and book vaccine. OTP is recieved by UDP Command to your HOST IP. Use any third party service to setup UDP command on mobile.
+Python files which will track vaccine availability and book vaccine. OTP is recieved by UDP Command to your HOST IP. Use any third party service to setup UDP command on mobile. Make sure to enter you phone number in the script.
+
+* bookVaccine.py - Instantly runs and books slot given that you have setup up the UDP command with same port number in both mobile and host.
+* trackAndBook.py - keeps checking vaccine availability using public API available at https://apisetu.gov.in/public/marketplace/api/cowin in a particular pincode. If available books vaccine given that you have setup up the UDP command with same port number in both mobile and host.
+* runme.sh - Calls trackAndBook.py continously as nohangup call in the background, and saves the process id in save_pid.txt and also creates a .txt file to keep track of log
+* kill_process.sh - Kills the process from save_pid.txt
+* instantBook.sh and instantBookKill.sh are alternatives of runme.sh and kill_process.sh which runs bookVaccine.py and creates intant.log 
 
 
 MIT License
