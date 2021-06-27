@@ -1,14 +1,13 @@
+import time
+from datetime import date
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import pandas as pd
-import time
 from PyQt5 import Qt
 import sys
 import socket
 import requests
 import os
-from datetime import date
-from datetime import datetime
 
 def coverter(text):
     #get otp from entire message in utf-8
@@ -59,12 +58,11 @@ def getOTP(driver,number):
     return driver
   
 def applyFilter(driver):
-    
-    driver.find_element_by_id('c1').click()                              #age 18+
-    #driver.find_element_by_id('c1').click()                             #age 45+
-    driver.find_element_by_id('c6').click()                              #paid 
-    driver.find_element_by_id('c7').click()                              #unpaid
-    driver.find_element_by_id('c3').click()                              #covishield 
+    driver.find_element_by_id('c1').click()        #age 18+
+    #driver.find_element_by_id('c1').click()       #age 45+
+    driver.find_element_by_id('c6').click()        #paid 
+    driver.find_element_by_id('c7').click()        #unpaid
+    driver.find_element_by_id('c3').click()        #covishield 
     return driver
 
 def setPincode(driver,pincode):
