@@ -22,6 +22,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import socket
 import os
+import sys
 
 def coverter(text):
     #get otp from entire message in utf-8
@@ -40,7 +41,8 @@ def notify(title, subtitle, message):
         
 def openurl(url):
     #open url in chrome driver
-    driver = webdriver.Chrome('/Users/surag/Desktop/CowinBot/chromedriver')
+    cwd = os.getcwd()
+    driver = webdriver.Chrome(cwd+'/chromedriver')
     driver.get(url)
     driver.maximize_window()
     return driver
@@ -107,7 +109,7 @@ def bookVaccine(pincode):
     driver=openurl(url)
     
     #Set Number and get OTP
-    driver=getOTP(driver,'9497756047')
+    driver=getOTP(driver,'9999999999')
 
     #Clicks on Schecdule Button
     driver.find_element_by_xpath("//li[@class='bordernone ng-star-inserted']").click()

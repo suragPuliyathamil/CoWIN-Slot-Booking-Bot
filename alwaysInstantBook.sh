@@ -14,5 +14,14 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
 # IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-nohup sh alwaysTrackandBook.sh > process.log 2>&1 &
-echo $! > save_pid.txt
+# nohup python3 bookVaccine.py > instant.log 2>&1 &&
+# echo $! > save_instant_pid.txt
+
+while true
+do
+{
+     python3 bookVaccine.py > Instantprocess.log &&
+     echo date &&
+     sleep 3m
+}
+done
