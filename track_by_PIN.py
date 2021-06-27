@@ -48,7 +48,6 @@ while True:
         for center in data['centers']:
             for session in center['sessions']:
                 if session['available_capacity'] > 0 and session['min_age_limit'] < 45 and session['vaccine'] == 'COVAXIN':
-                # if session['available_capacity'] > 0:
                     notify(center['name'],'Vaccine available','Opening Browse')
                     print(center['name'])
                     flag = 1
