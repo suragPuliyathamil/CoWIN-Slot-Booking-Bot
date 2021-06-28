@@ -1,4 +1,4 @@
-# CowinBot
+# CoWIN-Slot-Booking-Bot
 
 #### Python files which will track vaccine availability and book vaccine slot. OTP is recieved by UDP Command to your HOST IP. Use any third party service to setup UDP command on mobile. Make sure to enter you phone number and prefered Pincode in the script.
 
